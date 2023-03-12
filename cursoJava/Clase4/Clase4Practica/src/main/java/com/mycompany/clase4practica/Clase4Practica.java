@@ -16,10 +16,14 @@ import javax.swing.JOptionPane;
 public class Clase4Practica {
 
     public static void main(String[] args) {
-        int[] array = makeArray(10);
+        String inputNum = JOptionPane.showInputDialog("Ingrese extensión de lista numérica");
+        int valorX = Integer.parseInt(inputNum);
+        int[] array = makeArray(valorX);
         
         //JOptionPane.showMessageDialog(null, "El promedio de la lista de números brindada es"+ average(array));
-        JOptionPane.showMessageDialog(null, greaterThanAverage(array));
+        //JOptionPane.showMessageDialog(null, greaterThanAverage(array));
+        JOptionPane.showMessageDialog(null, "La lista original : "+  Arrays.toString(array) +
+                "\n la lista invertida: " +Arrays.toString(reverseArray(array)));
         
     }
     
@@ -66,4 +70,14 @@ public class Clase4Practica {
                 + "\n ( " + listValues + ")." ;
     }
     
+    public static int[] reverseArray(int[] array){
+        
+        int[] reversed = new int[array.length];
+        
+        for (int i = array.length - 1; i >= 0; i--){
+            reversed[(array.length - i - 1)] = array[i];
+        }
+        
+        return reversed;
+    }
 }
