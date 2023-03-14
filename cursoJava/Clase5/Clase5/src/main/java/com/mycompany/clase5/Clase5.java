@@ -22,13 +22,13 @@ public class Clase5 {
         
         switch(option){
             case("1"):
-                JOptionPane.showMessageDialog(null, resultSup(supSquare(), "cuadrado"));
+                resultSup(supSquare(requireInput("lado")), "cuadrado");
                 break;
             case("2"):
-                JOptionPane.showMessageDialog(null, resultSup(supRectangle(), "rectángulo"));
+                resultSup(supRectangle(requireInput("base"), requireInput("altura")), "rectángulo");
                 break;
             case("3"):
-                JOptionPane.showMessageDialog(null, resultSup(supCircle(), "círculo"));
+            resultSup(supCircle(requireInput("radio")), "círculo");
                 break;
             case("4"):
                 break;
@@ -37,35 +37,25 @@ public class Clase5 {
                 main(args);
             }
     }
-    
-    public static int supSquare(){
+
+    public static double requireInput(String input){
+        String input_num = JOptionPane.showInputDialog("Ingrese " + input);
+        return  Double.parseDouble(input_num);
+    }
         
-        String input_b = JOptionPane.showInputDialog("Ingrese lado");
-        int b = Integer.parseInt(input_b);
-        
-        return b*b;    
+    public static double supSquare(double side){        
+        return side * side ;    
     }
 
-    public static String resultSup(int sup, String figure){
-        return "La superficie del " + figure + " es: " + sup;
+    public static void resultSup(double sup, String figure){
+        JOptionPane.showMessageDialog(null, "La superficie del " + figure + " es: " + sup);
     }
     
-    public static int supRectangle(){
-        
-        String input_b = JOptionPane.showInputDialog("Ingrese base");
-        int b = Integer.parseInt(input_b);
-        
-        String input_h = JOptionPane.showInputDialog("Ingrese altura");
-        int h = Integer.parseInt(input_h);
-        
+    public static double supRectangle(double b, double h){        
         return b*h;    
     }
     
-    public static int supCircle(){
-        
-        String input_radio = JOptionPane.showInputDialog("Ingrese radio"); 
-        int radio = Integer.parseInt(input_radio);
-
-        return (int) (Math.PI * Math.pow(radio, 2));
+    public static double supCircle(double radio){
+        return (double) (Math.PI * Math.pow(radio, 2.00));
     }
 }
