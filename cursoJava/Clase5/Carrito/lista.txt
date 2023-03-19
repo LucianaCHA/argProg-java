@@ -1,0 +1,4 @@
+cant,preciounitario,producto,codigo
+1,40,jabon,4525
+3,10,esponja,1250
+2,100,limon,4758
