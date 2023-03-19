@@ -50,7 +50,7 @@ public class Main {
             ItemCarrito item = new ItemCarrito(prod, Integer.parseInt(producto[0]));
             listaDeProductos[i] = item;      
             }       
-            System.out.println("El total del carrito es: $" + carrito.totalCarrito(0, 0));
+            System.out.println("El total del carrito es: $" + carrito.precioFinalCarrito());
     }
 
 }
