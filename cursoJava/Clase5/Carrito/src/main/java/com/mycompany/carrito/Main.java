@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,7 +16,8 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) throws Exception{
-        crearListaProducto();
+        //(int descuento, int porcentajeInteres, boolean  aplicaDescuentoFijo, boolean descuentoPorcentajeTope)
+        crearListaProducto(10,0, true, false);
     }
 
     public static String[] leerLista (String path)  throws Exception{
@@ -34,13 +36,13 @@ public class Main {
         return Arrays.copyOfRange(lista, 1, lista.length);
     }
 
-    public static void crearListaProducto() throws Exception{
+    public static void crearListaProducto(int descuento, int porcentajeInteres, boolean  aplicaDescuentoFijo, boolean descuentoPorcentajeTope) throws Exception{
 
         String [] lista = leerLista("lista.txt");
 
         ItemCarrito[] listaDeProductos = new ItemCarrito[lista.length];
 
-        Carrito carrito = new Carrito(listaDeProductos);
+        Carrito carrito = new Carrito(listaDeProductos, descuento, porcentajeInteres, aplicaDescuentoFijo, descuentoPorcentajeTope);
 
         for (int i =0 ; i<3; i++){
             String[] producto = lista[i].split(",");
@@ -49,8 +51,11 @@ public class Main {
                 
             ItemCarrito item = new ItemCarrito(prod, Integer.parseInt(producto[0]));
             listaDeProductos[i] = item;      
-            }       
-            System.out.println("El total del carrito es: $" + carrito.precioFinalCarrito());
+            }
+            
+            JOptionPane.showMessageDialog(null, "El total del carrito es: $" + carrito.precioFinalCarrito());
+
+            carrito.mostrarProductos();
     }
 
 }

@@ -11,7 +11,7 @@ package com.mycompany.carrito;
 public class DescuentoPorcentajeConTope {
 
   float TOPE = 2500;
-  int descuento;
+  float descuento;
 
   public float aplicaDescuentoConTope(float importeBruto){
       float descuentoFinal = (descuento/100)* importeBruto;

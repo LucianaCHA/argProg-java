@@ -10,13 +10,13 @@ package com.mycompany.carrito;
  */
 public class Descuento {
     
-    int descuento;
+    float descuento;
     
     public float aplicaDescuento(float importeBruto){
         return importeBruto - (descuento/100)* importeBruto;
     }
     
-    public Descuento(int des){
+    public Descuento(float des){
         this.descuento = des;
     }
     
