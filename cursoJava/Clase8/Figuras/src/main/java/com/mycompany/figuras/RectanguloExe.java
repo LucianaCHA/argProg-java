@@ -24,14 +24,21 @@ public class RectanguloExe {
     i++;
     }
 
+    System.out.println("Mostrando rectangulos creados ");
+
     for (Rectangulo rectangulo : rectangulos) {
         rectangulo.mostrarTodos();
     }
     
+    System.out.println("Mostrando rectangulos tras incementar en tres las bases ");
+
     for (Rectangulo  rectangulo : rectangulos){
         rectangulo.base += 3;
         rectangulo.mostrarTodos();
     }
+
+    System.out.println("Mostrando rectangulos tras modificar su color ");
+
     
     for (Rectangulo  rectangulo : rectangulos){
         rectangulo.color = "rojo";
