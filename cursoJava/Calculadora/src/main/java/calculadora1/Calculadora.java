@@ -13,19 +13,19 @@ public class Calculadora {
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
 
-        boolean resultadoMultiplicar = calculadora.multiplicar(80, 3) == 240;
+        double resultadoMultiplicar = calculadora.multiplicar(80, 3);
 
-        boolean resultadoSumarDividir = calculadora.dividir(
+        double resultadoSumarDividir = calculadora.dividir(
             calculadora.sumar(150,180)
-            , 3) == 110;
-
-        boolean resultadorestaMultiplica = calculadora.multiplicar(
-            calculadora.restar(90,50)
-            , 15) != 605;
+            , 3);
         
-        boolean resultadoSumarMultiplica = calculadora.multiplicar(
-                calculadora.restar(70,40)
-                , 25) != 2700;
+        double resultadorestaMultiplica = calculadora.multiplicar(
+            calculadora.restar(90,50)
+            , 15);
+        
+        double resultadoSumarMultiplica = calculadora.multiplicar(
+            calculadora.restar(70,40)
+            , 25);
 
         System.out.println("El resultado de multiplicar 80 por 3 da 240 ? " + resultadoMultiplicar +
         "\n El resultado de sumar 150 y 180, dividido por 3, da 110 ? " + resultadoSumarDividir +

@@ -17,7 +17,12 @@ import javax.swing.JOptionPane;
 public class Main {
     public static void main(String[] args) throws Exception{
         //(int descuento, int porcentajeInteres, boolean  aplicaDescuentoFijo, boolean descuentoPorcentajeTope)
-        crearListaProducto(10,0, true, false);
+        int descuento = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el descuento"));
+        int porcentajeInteres = Integer.parseInt(JOptionPane.showInputDialog("Ingrese interés por pago en cuotas"));
+        boolean aplicaDescuentoFijo = Boolean.parseBoolean(JOptionPane.showConfirmDialog(null, "Aplica descuento fijo?") == 0 ? "true" : "false");
+        boolean descuentoPorcentajeTope = Boolean.parseBoolean(JOptionPane.showConfirmDialog(null, "Aplica descuento porcentaje tope?") == 0 ? "true" : "false");
+
+        crearListaProducto(descuento,porcentajeInteres, aplicaDescuentoFijo, descuentoPorcentajeTope);
     }
 
     public static String[] leerLista (String path)  throws Exception{
@@ -47,7 +52,6 @@ public class Main {
         for (int i =0 ; i<3; i++){
             String[] producto = lista[i].split(",");
             Producto prod = new Producto(producto[2], Float.parseFloat(producto[1]), Integer.parseInt(producto[3]));
-
                 
             ItemCarrito item = new ItemCarrito(prod, Integer.parseInt(producto[0]));
             listaDeProductos[i] = item;      
