@@ -1,0 +1,7 @@
+cant,preciounitario,producto,codigo
+2,12,algodon,123456
+3,130,fosforos,12
+1,230.15,alicate,352
+4,450.25,tomates,28
+2,408.25,limon,2885
+4,6.5,bolsa,10000
