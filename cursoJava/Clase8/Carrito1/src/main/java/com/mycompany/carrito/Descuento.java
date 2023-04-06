@@ -16,7 +16,7 @@ package com.mycompany.carrito;
     
     public float aplicaDescuento(float importeBruto)throws Exception{
         total = importeBruto - (descuento/100)* importeBruto;
-        if(importeBruto <= 0){
+        if(importeBruto <= 0 || descuento < 0){
             throw new Exception();
         }
 

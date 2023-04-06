@@ -26,11 +26,11 @@ public class DescuentoTest {
     private static final float DELTA = 0.01f;
 
     @BeforeAll
-    public static void setUpClass() throws Exception {
+    public static void setUpClass() {
     }
 
     @AfterAll
-    public static void tearDownClass() throws Exception {
+    public static void tearDownClass() {
     }
     
     @Test
