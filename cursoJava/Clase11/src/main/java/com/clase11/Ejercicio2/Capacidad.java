@@ -9,5 +9,9 @@ package com.clase11.Ejercicio2;
  * @author luciana
  */
 public interface Capacidad {
+
+  public boolean volar();
+  public boolean nadar();
+  public boolean caminar();
     
 }

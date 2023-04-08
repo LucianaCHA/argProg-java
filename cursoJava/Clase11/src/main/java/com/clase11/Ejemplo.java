@@ -25,6 +25,7 @@ public class Ejemplo {
         public SerCantor(String tipo){
             this.tipo = tipo;
         }
+        
         @Override
         public void cantar(){
             System.out.println(this.tipo+ " canta asi:");
