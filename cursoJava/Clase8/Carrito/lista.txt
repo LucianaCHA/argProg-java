@@ -1,0 +1,2 @@
+cant,preciounitario,producto,codigo
+2, 12, algodon, 123456
