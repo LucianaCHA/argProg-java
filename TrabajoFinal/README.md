@@ -26,7 +26,10 @@
 ## Tecnologías utilizadas
 
 Proyecto basado en Java con Maven
+<!-- TODO completar instrucciones
+## Instrucciones de uso -->
 
-## Instrucciones de uso
+
+
 
 
