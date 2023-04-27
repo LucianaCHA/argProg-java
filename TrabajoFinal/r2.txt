@@ -1,0 +1,8 @@
+Ronda,Equipo 1,Cant.goles 1,Cant. goles2, Equipo 2,Resultados
+1,Argentina,1,2,Arabia Saudita,Gana Equipo2
+1,Polonia,0,0,México,Empatan
+1,Argentina,2,0,México,Gana Equipo1
+1,Arabia Saudita,0,2,Polonia,Gana Equipo2
+2,Argentina,2,0,Polonia,Gana Equipo1
+2,Arabia Saudita,1,2,Mexico,Gana Equipo2
+3,México,2,1,Argentina,Gana Equipo1
